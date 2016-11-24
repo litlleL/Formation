@@ -5,13 +5,7 @@ import fr.pizzeria.model.Pizza;
 public class PizzaDaoTableau implements PizzaDao{
 	
 	private Pizza[] pizzas = {
-			new Pizza(0, "PEP", "peperoni", 12.50),
-			new Pizza(1, "MAR", "margherita", 14.00),
-			new Pizza(2, "REIN", "la reine", 11.50),
-			new Pizza(3, "FRO", "4 fromage", 12.00),
-			new Pizza(4, "CAN", "cannibale", 12.50),
-			new Pizza(5, "SAV", "savoyarde", 13.00),
-			new Pizza(6, "IND", "indienne", 14.00)
+			new Pizza(0, "PEP", "peperoni", 12.50)
 	};
 
 	@Override
@@ -29,11 +23,29 @@ public class PizzaDaoTableau implements PizzaDao{
 		}
 			pizzaTemp[pizzas.length] = p;
 			pizzas = pizzaTemp;
+			
 	}
 
 	@Override
-	public void updatePizza(String codePizza, Pizza p) {
+	public void updatePizza(int id, Pizza p) {
+		pizzas[id] = p;
+	}
+
+	@Override
+	public void deletePizza(int id) {
 		
+		Pizza[] pizzaTemp = new Pizza[pizzas.length-1];
+		int index = 0;
+		
+		for (int listeur = 0; listeur < pizzas.length; listeur++) {
+			pizzaTemp[index] = pizzas[listeur];
+			if(pizzas[listeur] != pizzas[id]){
+				pizzaTemp[index] = pizzas[listeur];
+				index++;
+			}
+		}
+		
+		pizzas = pizzaTemp;
 	}
 
 }

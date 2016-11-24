@@ -19,6 +19,8 @@ public class List extends MenuInterface{
 		for(Pizza p : this.ihmUtil.getPizzaDao().findAll()) {
 			System.out.println(p);
 		}
+		
+		System.out.println("------------------ " + Pizza.getNbPizzas() + " pizzas crées depuis le lancement du programme");
 	}
 
 	@Override

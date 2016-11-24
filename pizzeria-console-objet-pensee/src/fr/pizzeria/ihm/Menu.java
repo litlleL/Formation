@@ -12,7 +12,6 @@ import fr.pizzeria.action.Update;
 public class Menu  {
 
 	MenuInterface [] listeOutils = new  MenuInterface[5];
-	boolean exit;
 
 	Scanner reader = new Scanner(System.in);
 	
@@ -21,8 +20,8 @@ public class Menu  {
 		this.listeOutils[0] = new List(ihmUtil);
 		this.listeOutils[1] = new Create(ihmUtil);
 		this.listeOutils[2] = new Update(ihmUtil);
-		this.listeOutils[3] = new Delete();
-		this.listeOutils[4] = new Exit();
+		this.listeOutils[3] = new Delete(ihmUtil);
+		this.listeOutils[4] = new Exit(ihmUtil);
 
 		start();
 	}
@@ -31,13 +30,19 @@ public class Menu  {
 		do {
 			showMenu();
 			executeAction();
-		} while (!exit);
+		} while (true);
 	}
 
 	private void showMenu() {
 		for (int listeur = 0; listeur < listeOutils.length; listeur++) {
-			System.out.print(listeur + 1 + " ");
-			listeOutils[listeur].show();
+			if (listeur != 4) {
+				System.out.print(listeur + 1 + " ");
+				listeOutils[listeur].show();
+			}
+			else{
+				System.out.print("99");
+				listeOutils[listeur].show();
+			}
 		}
 	}
 

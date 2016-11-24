@@ -27,7 +27,7 @@ public class Create extends MenuInterface{
 		System.out.println("Veuillez saisir le prix");
 		prixPizza = ihmUtil.getScanner().nextDouble();
 		
-		this.ihmUtil.getPizzaDao().save(new Pizza(0, codePizza, nomPizza, prixPizza));
+		this.ihmUtil.getPizzaDao().save(new Pizza(this.ihmUtil.getPizzaDao().findAll().length, codePizza, nomPizza, prixPizza));
 	}
 
 	@Override
