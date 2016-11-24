@@ -6,5 +6,6 @@ public interface PizzaDao {
 		
 		Pizza[] findAll();
 		void save(Pizza p);
+		void updatePizza(String codePizza, Pizza p);
 }
 

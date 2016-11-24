@@ -1,6 +1,7 @@
 package fr.pizzeria.action;
 
 import fr.pizzeria.ihm.IhmUtil;
+import fr.pizzeria.model.Pizza;
 
 public class Create extends MenuInterface{
 
@@ -14,8 +15,19 @@ public class Create extends MenuInterface{
 
 	@Override
 	public void executeAction() {
-		// TODO Auto-generated method stub
+		String codePizza;
+		System.out.println("Veuillez saisir le code \n");
+		codePizza = ihmUtil.getScanner().next();
 		
+		String nomPizza;
+		System.out.println("Veuillez saisir le nom(sans espace) \n");
+		nomPizza = ihmUtil.getScanner().next();
+		
+		Double prixPizza;
+		System.out.println("Veuillez saisir le prix");
+		prixPizza = ihmUtil.getScanner().nextDouble();
+		
+		this.ihmUtil.getPizzaDao().save(new Pizza(0, codePizza, nomPizza, prixPizza));
 	}
 
 	@Override

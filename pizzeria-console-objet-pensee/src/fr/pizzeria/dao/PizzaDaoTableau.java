@@ -22,6 +22,18 @@ public class PizzaDaoTableau implements PizzaDao{
 	@Override
 	public void save(Pizza p) {
 		
+		Pizza[] pizzaTemp = new Pizza[pizzas.length+1];
+		
+		for (int listeur = 0; listeur < pizzas.length; listeur++) {
+			pizzaTemp[listeur] = pizzas[listeur];
+		}
+			pizzaTemp[pizzas.length] = p;
+			pizzas = pizzaTemp;
+	}
+
+	@Override
+	public void updatePizza(String codePizza, Pizza p) {
+		
 	}
 
 }

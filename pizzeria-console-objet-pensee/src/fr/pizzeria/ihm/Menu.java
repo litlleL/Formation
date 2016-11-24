@@ -8,7 +8,6 @@ import fr.pizzeria.action.Exit;
 import fr.pizzeria.action.List;
 import fr.pizzeria.action.MenuInterface;
 import fr.pizzeria.action.Update;
-import fr.pizzeria.dao.PizzaDao;
 
 public class Menu  {
 
@@ -21,7 +20,7 @@ public class Menu  {
 	public Menu(IhmUtil ihmUtil){
 		this.listeOutils[0] = new List(ihmUtil);
 		this.listeOutils[1] = new Create(ihmUtil);
-		this.listeOutils[2] = new Update();
+		this.listeOutils[2] = new Update(ihmUtil);
 		this.listeOutils[3] = new Delete();
 		this.listeOutils[4] = new Exit();
 
