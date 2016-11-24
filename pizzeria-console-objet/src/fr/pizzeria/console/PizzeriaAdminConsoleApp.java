@@ -35,7 +35,7 @@ public class PizzeriaAdminConsoleApp {
 				add(tableauPizza);
 				break;
 			case 3:
-				System.out.println("Mise à jour d'une pizza");
+				System.out.println("Mise ï¿½ jour d'une pizza");
 				update(tableauPizza);
 				break;
 			case 4:
@@ -62,7 +62,7 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println(tableauPizza[listeur].id + ") " + tableauPizza2[listeur].code + " -> " + tableauPizza2[listeur].nom + " (" + tableauPizza2[listeur].prix +")");
 			}
 			
-			System.out.println(" \n Veuillez choisir une pizza dans la liste à supprimer ou entrez 99 pour quitter");
+			System.out.println(" \n Veuillez choisir une pizza dans la liste ï¿½ supprimer ou entrez 99 pour quitter");
 			
 			pizzaChoisi = sc.nextInt();
 			
@@ -104,7 +104,7 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println(tableauPizza[listeur].id + ") " + tableauPizza2[listeur].code + " -> " + tableauPizza2[listeur].nom + " (" + tableauPizza2[listeur].prix +")");
 			}
 			
-			System.out.println(" \n Veuillez choisir une pizza dans la liste à modifier ou entrez 99 pour quitter");
+			System.out.println(" \n Veuillez choisir une pizza dans la liste ï¿½ modifier ou entrez 99 pour quitter");
 			
 			pizzaChoisi = sc.nextInt();
 			
@@ -175,7 +175,7 @@ public class PizzeriaAdminConsoleApp {
 		for (int listeur = 0; listeur < tableauPizza2.length; listeur++) {
 			System.out.println(tableauPizza[listeur].id + ") " + tableauPizza2[listeur].code + " -> " + tableauPizza2[listeur].nom + " (" + tableauPizza2[listeur].prix +")");
 		}
-		System.out.println("-----------" + Pizza.nbPizzas + " pizzas crée depuis l'initialisation du prog");
+		System.out.println("-----------" + Pizza.nbPizzas + " pizzas crï¿½e depuis l'initialisation du prog");
 	}
 
 	private static void menu() {
@@ -183,7 +183,7 @@ public class PizzeriaAdminConsoleApp {
 		System.out.println("***** Pizzeria Administration ***** \n"
 				+ "1. Lister les pizzas \n"
 				+ "2. Ajouter une nouvelle pizza \n"
-				+ "3. Mettre à jour une pizza \n"
+				+ "3. Mettre ï¿½ jour une pizza \n"
 				+ "4. Supprimer une pizza \n"
 				+ "99. Sortir");
 	}
