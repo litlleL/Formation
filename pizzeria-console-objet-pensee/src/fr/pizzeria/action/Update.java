@@ -19,10 +19,11 @@ public class Update extends MenuInterface{
 			System.out.println(p);
 		}
 		
+		System.out.println("Veuillez choisir la pizza à modifier\n");
+		
 		int choix;
 		choix = this.ihmUtil.getScanner().nextInt() - 1;
 
-		System.out.println("Veuillez choisir la pizza à modifier\n");
 		
 		String codePizza;
 		System.out.println("Veuillez saisir le nouveau code \n");
