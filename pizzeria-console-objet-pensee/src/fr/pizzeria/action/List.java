@@ -20,7 +20,7 @@ public class List extends MenuInterface{
 			System.out.println(p);
 		}
 		
-		System.out.println("------------------ " + Pizza.getNbPizzas() + " pizzas crÃ©es depuis le lancement du programme");
+		System.out.println("------------------ " + Pizza.getNbPizzas() + " pizzas crées depuis le lancement du programme");
 	}
 
 	@Override

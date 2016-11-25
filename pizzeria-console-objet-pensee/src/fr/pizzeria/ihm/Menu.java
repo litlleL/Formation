@@ -26,10 +26,8 @@ public class Menu  {
 	}
 
 	public void start() {
-		do {
 			showMenu();
 			executeAction();
-		} while (true);
 	}
 
 	private void showMenu() {
@@ -51,6 +49,7 @@ public class Menu  {
 		
 		if(Integer.parseInt(value) < 5){
 			this.listeOutils[Integer.parseInt(value) - 1].executeAction();
+			start();
 		}
 		else if (Integer.parseInt(value) == 99) {
 			this.listeOutils[listeOutils.length - 1].executeAction();

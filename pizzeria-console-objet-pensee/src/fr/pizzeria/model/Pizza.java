@@ -53,13 +53,14 @@ public class Pizza {
 		this.code = code;
 		this.nom = nom;
 		this.prix = prix;
+		nbPizzas+=1;
 	}
 	
 	public Pizza(String code, String nom, double prix){
+		super();
 		this.code = code;
 		this.nom = nom;
 		this.prix = prix;
-		nbPizzas+=1;
 	}
 	
 	public Pizza() {
