@@ -23,10 +23,9 @@ public class Menu  {
 		this.listeOutils[3] = new Delete(ihmUtil);
 		this.listeOutils[4] = new Exit(ihmUtil);
 
-		start();
 	}
 
-	private void start() {
+	public void start() {
 		do {
 			showMenu();
 			executeAction();

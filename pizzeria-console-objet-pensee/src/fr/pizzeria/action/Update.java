@@ -20,7 +20,7 @@ public class Update extends MenuInterface{
 		}
 		
 		int choix;
-		choix = this.ihmUtil.getScanner().nextInt();
+		choix = this.ihmUtil.getScanner().nextInt() - 1;
 
 		System.out.println("Veuillez choisir la pizza à modifier\n");
 		

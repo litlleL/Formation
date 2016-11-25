@@ -56,13 +56,20 @@ public class Pizza {
 		nbPizzas+=1;
 	}
 	
+	public Pizza(String code, String nom, double prix){
+		this.code = code;
+		this.nom = nom;
+		this.prix = prix;
+		nbPizzas+=1;
+	}
+	
 	public Pizza() {
 		super();
 	}
 	
 	@Override
 	public String toString() {
-		return "Pizza [id=" + id + ", code=" + code + ", nom=" + nom + ", prix=" + prix + "]";
+		return "Pizza [id=" + (id + 1) + ", code=" + code + ", nom=" + nom + ", prix=" + prix + "]";
 	}
 	
 }

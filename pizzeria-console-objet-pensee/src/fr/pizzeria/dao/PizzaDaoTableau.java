@@ -15,13 +15,14 @@ public class PizzaDaoTableau implements PizzaDao{
 
 	@Override
 	public void save(Pizza p) {
+		Pizza pizzaToAdd = new Pizza(pizzas.length, p.getCode(), p.getNom(), p.getPrix());
 		
 		Pizza[] pizzaTemp = new Pizza[pizzas.length+1];
 		
 		for (int listeur = 0; listeur < pizzas.length; listeur++) {
 			pizzaTemp[listeur] = pizzas[listeur];
 		}
-			pizzaTemp[pizzas.length] = p;
+			pizzaTemp[pizzas.length] = pizzaToAdd;
 			pizzas = pizzaTemp;
 			
 	}
@@ -36,9 +37,7 @@ public class PizzaDaoTableau implements PizzaDao{
 		
 		Pizza[] pizzaTemp = new Pizza[pizzas.length - 1];
 		int index = 0;
-		System.out.println(pizzaTemp.length);
 		for (int listeur = 0; listeur < pizzas.length; listeur++) {
-			System.out.println(pizzas[listeur].getId() + ") " + pizzas[listeur].getCode() + " -> " + pizzas[listeur].getNom() + " (" + pizzas[listeur].getPrix() +")");
 			if(pizzas[listeur] != pizzas[id]){
 				pizzaTemp[index] = pizzas[listeur];
 				index++;
