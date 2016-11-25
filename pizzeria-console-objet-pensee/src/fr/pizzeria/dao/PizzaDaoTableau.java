@@ -34,11 +34,11 @@ public class PizzaDaoTableau implements PizzaDao{
 	@Override
 	public void deletePizza(int id) {
 		
-		Pizza[] pizzaTemp = new Pizza[pizzas.length-1];
+		Pizza[] pizzaTemp = new Pizza[pizzas.length - 1];
 		int index = 0;
-		
+		System.out.println(pizzaTemp.length);
 		for (int listeur = 0; listeur < pizzas.length; listeur++) {
-			pizzaTemp[index] = pizzas[listeur];
+			System.out.println(pizzas[listeur].getId() + ") " + pizzas[listeur].getCode() + " -> " + pizzas[listeur].getNom() + " (" + pizzas[listeur].getPrix() +")");
 			if(pizzas[listeur] != pizzas[id]){
 				pizzaTemp[index] = pizzas[listeur];
 				index++;
