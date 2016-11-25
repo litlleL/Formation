@@ -1,10 +1,8 @@
 package fr.pizzeria.ihm;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Scanner;
 
 import fr.pizzeria.action.Create;
 import fr.pizzeria.action.Delete;
@@ -16,7 +14,7 @@ import fr.pizzeria.action.Update;
 public class Menu  {
 
 	Map<Integer, MenuInterface> listeOutils = new HashMap<Integer, MenuInterface>();
-	Scanner reader = new Scanner(System.in);
+	IhmUtil reader;
 	
 	
 	public Menu(IhmUtil ihmUtil){
@@ -25,6 +23,7 @@ public class Menu  {
 		listeOutils.put(2,new Update(ihmUtil));
 		listeOutils.put(3,new Delete(ihmUtil));
 		listeOutils.put(4,new Exit(ihmUtil));
+		this.reader = ihmUtil;
 	}
 
 	public void start() {
@@ -46,7 +45,7 @@ public class Menu  {
 		
 		System.out.println("Faites un choix  \n");
 		
-		String value = reader.next();
+		String value = reader.getScanner().next();
 		
 		if(Integer.parseInt(value) < 5){
 			listeOutils.get(Integer.parseInt(value) - 1).executeAction();
