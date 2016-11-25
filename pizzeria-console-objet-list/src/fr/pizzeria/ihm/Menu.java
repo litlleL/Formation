@@ -14,9 +14,8 @@ import fr.pizzeria.action.Update;
 public class Menu  {
 
 	Map<Integer, MenuInterface> listeOutils = new HashMap<Integer, MenuInterface>();
+
 	IhmUtil reader;
-	
-	
 	public Menu(IhmUtil ihmUtil){
 		listeOutils.put(0,new List(ihmUtil));
 		listeOutils.put(1,new Create(ihmUtil));
