@@ -1,6 +1,5 @@
 package fr.pizzeria.dao;
 
-import fr.pizzeria.exception.PizzaException;
 import fr.pizzeria.exception.SavePizzaException;
 import fr.pizzeria.exception.UpdatePizzaException;
 import fr.pizzeria.model.Pizza;

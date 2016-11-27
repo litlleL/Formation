@@ -53,9 +53,7 @@ public class Menu  {
 		if(Integer.parseInt(value) < 5){
 			try {
 				this.listeOutils[Integer.parseInt(value) - 1].executeAction();
-			} catch (UpdatePizzaException e) {
-				e.printStackTrace();
-			} catch (DeletePizzaException e) {
+			} catch (UpdatePizzaException | DeletePizzaException e) {
 				e.printStackTrace();
 			} catch (SavePizzaException e) {
 				e.printStackTrace();
