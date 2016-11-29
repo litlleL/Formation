@@ -35,8 +35,9 @@ public class Menu {
 	}
 
 	private void showMenu() {
-		listeOutils.entrySet().stream().map(listeOutils -> listeOutils.getValue().getLibelle())
-				.forEach(System.out::println);
+		listeOutils.forEach((k, v) -> {
+			System.out.println((k + 1) + ": " + v.getLibelle());
+		});
 	}
 
 	private void executeAction() {
