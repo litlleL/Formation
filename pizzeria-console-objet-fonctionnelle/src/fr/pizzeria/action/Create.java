@@ -28,14 +28,14 @@ public class Create extends MenuInterface {
 		System.out.println("Veuillez saisir le prix");
 		prixPizza = ihmUtil.getScanner().nextDouble();
 
-		int catégorie;
+		int categorie;
 		System.out.println("Veuillez choisir la caégorie de votre pizza");
 		System.out.println("1 -> Viande \n2 -> Sans Viande \n3 -> Poisson");
-		catégorie = ihmUtil.getScanner().nextInt();
+		categorie = ihmUtil.getScanner().nextInt();
 
-		if (catégorie == 1) {
+		if (categorie == 1) {
 			this.ihmUtil.getPizzaDao().save(new Pizza(codePizza, nomPizza, prixPizza, CategoriePizza.VIANDE));
-		} else if (catégorie == 2) {
+		} else if (categorie == 2) {
 			this.ihmUtil.getPizzaDao().save(new Pizza(codePizza, nomPizza, prixPizza, CategoriePizza.SANS_VIANDE));
 		} else {
 			this.ihmUtil.getPizzaDao().save(new Pizza(codePizza, nomPizza, prixPizza, CategoriePizza.POISSON));
