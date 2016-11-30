@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="operateurs-console/src"/>
+	<classpathentry kind="src" path="pizzeria-console-imperative/src"/>
+	<classpathentry kind="src" path="pizzeria-console-objet-enum&amp;annot/src"/>
+	<classpathentry kind="src" path="pizzeria-console-objet-exception/src"/>
+	<classpathentry kind="src" path="pizzeria-console-objet-fonctionnelle/src"/>
+	<classpathentry kind="src" path="pizzeria-console-objet-list/src"/>
+	<classpathentry kind="src" path="pizzeria-console-objet-pensee/src"/>
+	<classpathentry kind="src" path="pizzeria-console-objet/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="operateurs-console/bin"/>
+</classpath>
