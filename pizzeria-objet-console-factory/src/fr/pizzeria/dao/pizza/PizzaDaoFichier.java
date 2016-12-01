@@ -28,7 +28,7 @@ public class PizzaDaoFichier implements PizzaDao {
 				try {
 
 					List<String> pizza = Files.readAllLines(directory, charset);
-					String str = pizza.toString().replaceAll("]", "");
+					String str = pizza.get(0);
 					String parts[] = str.split(",");
 					pizzas.add(new Pizza(parts[0], parts[1], Double.parseDouble(parts[2]),
 							CategoriePizza.valueOf(parts[3])));
@@ -60,6 +60,7 @@ public class PizzaDaoFichier implements PizzaDao {
 	@Override
 	public void updatePizza(int id, Pizza p) {
 		String code = findAll().get(id).getCode();
+		System.out.println(code);
 	}
 
 	@Override
