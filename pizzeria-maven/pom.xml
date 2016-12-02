@@ -9,11 +9,33 @@
 
 	<build>
 		<finalName>Pizzeria Donnut</finalName>
-
-		<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.4.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<filters>
+								<filter>
+									<includes>
+										<include>org/apache/commons/lang3/builder/**</include>
+									</includes>
+								</filter>
+							</filters>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 		
+		<pluginManagement>
 			<plugins>
-
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
@@ -34,33 +56,9 @@
 						</archive>
 					</configuration>
 				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-shade-plugin</artifactId>
-					<version>2.4.3</version>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>shade</goal>
-							</goals>
-							<configuration>
-								<filters>
-									<filter>
-										<includes>
-											<include>org/apache/commons/lang3/builder/**</include>
-										</includes>
-									</filter>
-								</filters>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-
 			</plugins>
-			
 		</pluginManagement>
+
 	</build>
 
 	<dependencies>
@@ -76,7 +74,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.5</version>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>
