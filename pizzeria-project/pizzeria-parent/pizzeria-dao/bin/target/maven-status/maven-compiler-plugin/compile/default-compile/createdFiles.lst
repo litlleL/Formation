@@ -1,0 +1,6 @@
+fr\pizzeria\dao\service\PizzaDaoFactory.class
+fr\pizzeria\dao\pizza\PizzaDaoFichier.class
+fr\pizzeria\dao\service\PizzaFactoryFichier.class
+fr\pizzeria\dao\pizza\PizzaDao.class
+fr\pizzeria\dao\service\PizzaFactoryTableau.class
+fr\pizzeria\dao\pizza\PizzaDaoTableau.class

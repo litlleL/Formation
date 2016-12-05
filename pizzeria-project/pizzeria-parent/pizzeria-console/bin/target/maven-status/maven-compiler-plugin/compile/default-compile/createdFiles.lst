@@ -1,0 +1,11 @@
+fr\pizzeria\console\PizzeriaAdminConsoleApp.class
+fr\pizzeria\action\MenuInterface.class
+fr\pizzeria\action\Create.class
+fr\pizzeria\ihm\IhmUtil.class
+fr\pizzeria\ihm\Menu.class
+fr\pizzeria\action\ListCher.class
+fr\pizzeria\action\List.class
+fr\pizzeria\action\ListCategorie.class
+fr\pizzeria\action\Delete.class
+fr\pizzeria\action\Update.class
+fr\pizzeria\action\Exit.class

@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>pizzeria-console</artifactId>
+	<name>pizzeria-console</name>
+	
+	<parent>
+		<groupId>fr</groupId>
+		<artifactId>pizzeria-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-shade-plugin</artifactId>
+				<configuration>
+					<filters>
+						<filter>
+							<includes>
+								<include>fr/pizzeria/model/**</include>
+								<include>fr/pizzeria/dao/**</include>
+							</includes>
+						</filter>
+					</filters>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>fr.pizzeria.console.PizzeriaAdminConsoleApp</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>fr</groupId>
+			<artifactId>pizzeria-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr</groupId>
+			<artifactId>pizzeria-dao</artifactId>
+		</dependency>
+	</dependencies>
+</project>
