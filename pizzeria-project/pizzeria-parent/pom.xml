@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>pizzeria-parent</name>
-	
+
 
 	<modules>
 		<module>pizzeria-model</module>
@@ -15,8 +15,6 @@
 	</modules>
 
 	<build>
-		<finalName>Pizzeria Donnut</finalName>
-
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -26,46 +24,34 @@
 						<target>1.8</target>
 					</configuration>
 				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.0.2</version>
-
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-shade-plugin</artifactId>
-					<version>2.4.3</version>
-				</plugin>
-
 			</plugins>
 		</pluginManagement>
-
 	</build>
+
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+				<scope>test</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>3.5</version>
 			</dependency>
 			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>pizzeria-model</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>pizzeria-console</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>pizzeria-dao</artifactId>
-				<version>${project.version}</version>
-			</dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>pizzeria-dao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>pizzeria-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
 </project>
