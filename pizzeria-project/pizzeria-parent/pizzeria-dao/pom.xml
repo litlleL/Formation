@@ -9,36 +9,13 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-shade-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-							<filters>
-								<filter>
-									<includes>
-										<include>fr/pizzeria/model/**</include>
-										<include>fr/pizzeria/enumeration/**</include>
-									</includes>
-								</filter>
-							</filters>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-	
 	<dependencies>
 		<dependency>
-			<groupId>fr</groupId>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>pizzeria-model</artifactId>
 		</dependency>
 	</dependencies>
