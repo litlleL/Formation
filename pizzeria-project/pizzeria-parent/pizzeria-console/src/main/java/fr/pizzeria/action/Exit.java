@@ -4,14 +4,13 @@ import fr.pizzeria.ihm.IhmUtil;
 
 public class Exit extends MenuInterface {
 
-
 	private IhmUtil ihmUtil;
 
 	public Exit(IhmUtil ihmUtil) {
 		super();
 		this.setIhmUtil(ihmUtil);
 		this.setLibelle("sortir");
-		
+
 	}
 
 	@Override
@@ -32,5 +31,4 @@ public class Exit extends MenuInterface {
 	public void setIhmUtil(IhmUtil ihmUtil) {
 		this.ihmUtil = ihmUtil;
 	}
-	sdfsfsdf;
 }
