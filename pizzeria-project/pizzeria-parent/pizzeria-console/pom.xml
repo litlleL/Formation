@@ -44,12 +44,14 @@
 				</executions>
 			</plugin>
 		</plugins>
+		
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+		
 	</build>
 
 	<dependencies>
@@ -68,21 +70,24 @@
 	</dependencies>
 
 	<profiles>
+	
 		<profile>
 			<id>fichier</id>
 			<activation>
+				<activeByDefault>false</activeByDefault>
 				<file>
 					<exists>application.properties</exists>
 				</file>
-				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
 				<factoryValue.mode>fr.pizzeria.dao.service.PizzaFactoryFichier</factoryValue.mode>
 			</properties>
 		</profile>
+		
 		<profile>
 			<id>tableau</id>
 			<activation>
+				<activeByDefault>false</activeByDefault>
 				<file>
 					<exists>application.properties</exists>
 				</file>

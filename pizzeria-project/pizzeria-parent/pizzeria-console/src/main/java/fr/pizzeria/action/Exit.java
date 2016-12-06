@@ -32,4 +32,5 @@ public class Exit extends MenuInterface {
 	public void setIhmUtil(IhmUtil ihmUtil) {
 		this.ihmUtil = ihmUtil;
 	}
+	sdfsfsdf;
 }
