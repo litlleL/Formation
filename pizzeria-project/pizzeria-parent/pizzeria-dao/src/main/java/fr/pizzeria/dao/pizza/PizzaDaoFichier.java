@@ -15,7 +15,7 @@ import fr.pizzeria.model.Pizza;
 
 public class PizzaDaoFichier implements PizzaDao {
 	Path pathRep = FileSystems.getDefault().getPath(
-			"C:/Users/ETY10/Documents/Formation_2016/git/Formation_DTA/pizzeria-objet-console-factory/fichierDao/");
+			"C:/Users/ETY10/Documents/Formation_2016/git/Formation_DTA/pizzeria-project/pizzeria-parent/pizzeria-dao/src/main/resources/fichierDao");
 
 	@Override
 	public List<Pizza> findAll() {
@@ -37,6 +37,8 @@ public class PizzaDaoFichier implements PizzaDao {
 					e.printStackTrace();
 				}
 			});
+
+			directoryStream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -55,6 +57,7 @@ public class PizzaDaoFichier implements PizzaDao {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
 
 	@Override
@@ -66,6 +69,7 @@ public class PizzaDaoFichier implements PizzaDao {
 	@Override
 	public void deletePizza(int id) {
 		String code = findAll().get(id).getCode();
+		System.out.println(code);
 	}
 
 }
